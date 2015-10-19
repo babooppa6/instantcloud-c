@@ -27,6 +27,7 @@ static const char region_data[NUM_REGIONS][MAX_REGION_LEN+1] = \
 static const char machine_data[NUM_MACHINE_TYPE][MAX_MACHINE_LEN+1] = \
   { MACHINE_C4_LARGE,
     MACHINE_C4_2XLARGE,
+    MACHINE_C4_4XLARGE,
     MACHINE_C4_8XLARGE,
     MACHINE_R3_8XLARGE };
 static const char \

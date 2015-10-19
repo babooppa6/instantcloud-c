@@ -16,9 +16,10 @@
 #define STATE_SHUTTING_DOWN      "shutting down"
 #define STATE_LAUNCH_ERROR       "launch error"
 
-#define NUM_MACHINE_TYPE 4
+#define NUM_MACHINE_TYPE 5
 #define MACHINE_C4_LARGE   "c4.large"
 #define MACHINE_C4_2XLARGE "c4.2xlarge"
+#define MACHINE_C4_4XLARGE "c4.4xlarge"
 #define MACHINE_C4_8XLARGE "c4.8xlarge"
 #define MACHINE_R3_8XLARGE "r3.8xlarge"
 
