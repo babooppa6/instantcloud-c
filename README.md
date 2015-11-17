@@ -1,6 +1,9 @@
 # Instant Cloud API - C client
 
-This repository contains sample C code for making API requests to the Gurobi Instant Cloud.
+This repository contains sample C code for making API requests to the
+Gurobi Instant Cloud.  This sample code is provided for illustration
+purposes; it is not covered by the support terms of the Gurobi End
+User License Agreement.
 
 ## Obtaining this repository
 
