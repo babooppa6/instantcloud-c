@@ -78,9 +78,10 @@ typedef struct _ICcloudlicense
 
 int ICcloudcreds(char *accessid, char *secretkey);
 int IClaunchmachines(int n, char *license_type, int *license_idP,
-                   char *machine_password, char *region,
-                   char *machine_typeP, int *idleshutdownP,
-                   ICmachineinfo **machine_infoP);
+                     char *machine_password, char *region,
+                     char *machine_typeP, int *idleshutdownP,
+                     char *gurobi_version,
+                     ICmachineinfo **machine_infoP);
 int ICkillmachines(int n, char **machine_ids, ICmachineinfo **machine_infoP);
 int ICgetmachines(ICmachineinfo **machine_infoP);
 int ICgetlicenses(int *num_licensesP, ICcloudlicense *licenses);

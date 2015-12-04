@@ -29,6 +29,7 @@
 #define REGION         "--region"
 #define IDLE_SHUTDOWN  "--idleshutdown"
 #define MACHINE_TYPE   "--machinetype"
+#define GUROBI_VERSION "--gurobiversion"
 
 #define HELP_COMMAND     0
 #define LAUNCH_COMMAND   1
@@ -145,6 +146,7 @@ main(int   argc,
   char  *password             = NULL;
   char  *region               = NULL;
   char  *machine_type         = NULL;
+  char  *gurobi_version       = NULL;
   char  *id                   = NULL;
   char  *key                  = NULL;
   int    num_machines         = -1;
@@ -286,13 +288,17 @@ main(int   argc,
             printf("Bad options %s for machine type\n", machine_type);
             goto QUIT;
           }
+        } else if (strcmp(argv[cursor], "-g") == 0          ||
+                   strcmp(argv[cursor], GUROBI_VERSION) == 0  ) {
+          gurobi_version = argv[++cursor];
         }
       }
     }
 
     error = IClaunchmachines(num_machines, license_type,
                              licenseidP, password, region,
-                             machine_type, &idleshutdown, &machine_info);
+                             machine_type, &idleshutdown,
+                             gurobi_version, &machine_info);
     if (error) goto QUIT;
 
     num_machines = machine_info->num_machines;

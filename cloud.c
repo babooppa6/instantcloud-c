@@ -809,6 +809,7 @@ IClaunchmachines(int              n,
                  char            *region,
                  char            *machine_type,
                  int             *idleshutdownP,
+                 char            *gurobi_version,
                  ICmachineinfo  **machine_infoP)
 {
   char request[MAX_STRLEN+1];
@@ -918,6 +919,10 @@ IClaunchmachines(int              n,
 
   if (idleshutdownP) {
      sprintf(&request[strlen(request)], "&idleShutdown=%d", *idleshutdownP);
+  }
+
+  if (gurobi_version) {
+    sprintf(&request[strlen(request)], "&GRBVersion=%s", gurobi_version);
   }
 
   post_end = &request[strlen(request)];
